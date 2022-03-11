@@ -1,0 +1,18 @@
+.mainDiv{
+    height: 300px;
+    width: 40% ;
+    padding: 40px;
+}
+
+.flex-upload{
+    padding-top: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.image-style{
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+}

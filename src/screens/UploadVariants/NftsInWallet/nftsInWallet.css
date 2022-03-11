@@ -1,0 +1,10 @@
+.importButton{
+    background-color: dodgerblue;
+    border-radius: 5px ;
+    width: 50%;
+    border: none;
+    height: 40px;
+    color: white;
+    font-family: 'Poppins', sans-serif;
+    margin-left: 25%;
+}
