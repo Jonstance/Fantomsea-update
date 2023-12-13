@@ -149,7 +149,7 @@ const Control = ({ className, nftData, currentUserAddress, setItemData, setNftAu
     console.log(nftData.royalty.replace('%', ''))
 
 
-    const fetchCollectionPromise = await  fetch("https://fantomsea-api.herokuapp.com/collection/getCollectionByAddress", {
+    const fetchCollectionPromise = await  fetch("http://localhost:5001/collection/getCollectionByAddress", {
         method : 'POST',
       headers:{
         'Content-Type' : "application/json"
@@ -172,7 +172,7 @@ const Control = ({ className, nftData, currentUserAddress, setItemData, setNftAu
       
   console.log(transaction)
 
-    fetch("https://fantomsea-api.herokuapp.com/nft/putNftForSale", {
+    fetch("http://localhost:5001/nft/putNftForSale", {
         method : 'POST',
         headers:{
           'Content-Type' : 'application/json'
@@ -251,7 +251,7 @@ catch(e){
         try{
         const transactionRemove = await nftMarketContract.removeMarketItem(nftCreatorAddress, tokenId, itemId )
           
-          fetch("https://fantomsea-api.herokuapp.com/nft/putNftOutOfSale", {
+          fetch("http://localhost:5001/nft/putNftOutOfSale", {
       method : 'POST',
       headers:{
         'Content-Type' : 'application/json'
@@ -321,7 +321,7 @@ catch(e){
           console.log(setApprovalForAll)
         }
 
-        const fetchCollectionPromise = await  fetch("https://fantomsea-api.herokuapp.com/collection/getCollectionByAddress", {
+        const fetchCollectionPromise = await  fetch("http://localhost:5001/collection/getCollectionByAddress", {
           method : 'POST',
         headers:{
           'Content-Type' : "application/json"
@@ -343,7 +343,7 @@ catch(e){
 
     console.log(transaction)
 
-    fetch("https://fantomsea-api.herokuapp.com/nft/putNftForSale", {
+    fetch("http://localhost:5001/nft/putNftForSale", {
         method : 'POST',
         headers:{
           'Content-Type' : 'application/json'
@@ -354,7 +354,7 @@ catch(e){
       })
       .then(res=>res.json())
       .then(data=>{
-        fetch("https://fantomsea-api.herokuapp.com/auction/setAuctionWinner", {
+        fetch("http://localhost:5001/auction/setAuctionWinner", {
           method:'POST',
           headers:{
             'Content-Type' : 'application/json'
@@ -383,7 +383,7 @@ catch(e){
 
   const listAuction = (reservedPrice, auctionDeadline)=>{
 
-    fetch('https://fantomsea-api.herokuapp.com/auction/createAuctionFromExistingNFT', {
+    fetch('http://localhost:5001/auction/createAuctionFromExistingNFT', {
       method : 'POST',
       headers:{
         'Content-type' : 'application/json'

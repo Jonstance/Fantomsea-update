@@ -44,7 +44,7 @@ const Search = () => {
 
   useEffect(()=>{
 
-    fetch('https://fantomsea-api.herokuapp.com/nft/getAllNfts')
+    fetch('http://localhost:5001/nft/getAllNfts')
     .then(res=>res.json())
     .then(data=>{
       setAllNFTData(data)
@@ -52,7 +52,7 @@ const Search = () => {
       setCurrentView(data)
     })
 
-    fetch('https://fantomsea-api.herokuapp.com/collection/getAll').then(res=>res.json())
+    fetch('http://localhost:5001/collection/getAll').then(res=>res.json())
     .then(data=>{
       console.log(data)
       setCollectionsInFsea(data)
@@ -99,7 +99,7 @@ const Search = () => {
 
   const getMoreNFTs = ()=>{
     const lastId  = allNftData[allNftData.length-1]._id
-    fetch("https://fantomsea-api.herokuapp.com/nft/getMoreNtfs", {
+    fetch("http://localhost:5001/nft/getMoreNtfs", {
       method:'POST',
       headers:{
         'Content-type' : 'application/json'

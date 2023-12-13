@@ -96,7 +96,7 @@ const jsmediatags = window.jsmediatags
     let nftDetails
 (async ()=>{
     if(isExternalNFTViewed === false){
-      fetch("https://fantomsea-api.herokuapp.com/nft/getSingleNFTData", {
+      fetch("http://localhost:5001/nft/getSingleNFTData", {
         method :'POST',
         headers:{
           'Content-type' : 'application/json'
@@ -114,7 +114,7 @@ const jsmediatags = window.jsmediatags
         const contractAddress = data.nftData.contractAddress
         const contractTokenId = data.nftData.contractId
   
-        fetch(`https://fantomsea-api.herokuapp.com/externalData/getNftMetaData`, {
+        fetch(`http://localhost:5001/externalData/getNftMetaData`, {
           method : 'POST',
           headers:{
             'Content-type' : 'application/json'
@@ -196,7 +196,7 @@ const jsmediatags = window.jsmediatags
         setArrayOfUsers(arrayOfUsers)
 
 
-        const apiCallForCollection =  await fetch('https://fantomsea-api.herokuapp.com/collection/getCollection', {
+        const apiCallForCollection =  await fetch('http://localhost:5001/collection/getCollection', {
         method : 'POST',
         headers:{
             'Content-type' :'application/json'
@@ -232,7 +232,7 @@ const jsmediatags = window.jsmediatags
 
       console.log(contractAddress, contractTokenId)
 
-      fetch(`https://fantomsea-api.herokuapp.com/externalData/getNftMetaData`, {
+      fetch(`http://localhost:5001/externalData/getNftMetaData`, {
           method : 'POST',
           headers:{
             'Content-type' : 'application/json'

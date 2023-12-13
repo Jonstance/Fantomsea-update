@@ -374,7 +374,7 @@ const Upload = () => {
   
       if(isAuction){
 
-        fetch("https://fantomsea-api.herokuapp.com/collection/uploadCollection", {
+        fetch("http://localhost:5001/collection/uploadCollection", {
       method : 'POST',
       headers:{
         'Content-Type' : "application/json"
@@ -417,7 +417,7 @@ const Upload = () => {
 
       console.log(nftItemData)
 
-      fetch("https://fantomsea-api.herokuapp.com/nft/UploadnftAuctionData", {
+      fetch("http://localhost:5001/nft/UploadnftAuctionData", {
         method : 'POST',
         headers:{
           "Content-Type" : "application/json"
@@ -491,7 +491,7 @@ const Upload = () => {
   
       console.log(nftCreatorAddress)
 
-      const fetchCollectionPromise = await  fetch("https://fantomsea-api.herokuapp.com/collection/getCollectionByAddress", {
+      const fetchCollectionPromise = await  fetch("http://localhost:5001/collection/getCollectionByAddress", {
         method : 'POST',
       headers:{
         'Content-Type' : "application/json"
@@ -515,7 +515,7 @@ const Upload = () => {
   
       const transactionDetails = await  listNFTTransaction.wait()
 
-        fetch("https://fantomsea-api.herokuapp.com/collection/uploadCollection", {
+        fetch("http://localhost:5001/collection/uploadCollection", {
       method : 'POST',
       headers:{
         'Content-Type' : "application/json"
@@ -559,7 +559,7 @@ const Upload = () => {
   
       
   
-      fetch("https://fantomsea-api.herokuapp.com/nft/uploadSingleNft", {
+      fetch("http://localhost:5001/nft/uploadSingleNft", {
         method : 'POST',
         headers:{
           "Content-Type" : "application/json"
@@ -608,7 +608,7 @@ const Upload = () => {
       const transactionDetails = await  listNFTTransaction.wait()
   
       console.log(transactionDetails)
-      fetch("https://fantomsea-api.herokuapp.com/collection/uploadCollection", {
+      fetch("http://localhost:5001/collection/uploadCollection", {
         method : 'POST',
         headers:{
           'Content-Type' : "application/json"
@@ -651,7 +651,7 @@ const Upload = () => {
     
         
     
-        fetch("https://fantomsea-api.herokuapp.com/nft/uploadSingleNft", {
+        fetch("http://localhost:5001/nft/uploadSingleNft", {
           method : 'POST',
           headers:{
             "Content-Type" : "application/json"
@@ -684,7 +684,7 @@ const Upload = () => {
 
   const uploadNftToDb = ()=>{
     if(isAuction){
-      fetch("https://fantomsea-api.herokuapp.com/collection/uploadCollection", {
+      fetch("http://localhost:5001/collection/uploadCollection", {
     method : 'POST',
     headers:{
       'Content-Type' : "application/json"
@@ -726,7 +726,7 @@ const Upload = () => {
 
     console.log(nftItemData)
 
-    fetch("https://fantomsea-api.herokuapp.com/nft/UploadnftAuctionData", {
+    fetch("http://localhost:5001/nft/UploadnftAuctionData", {
       method : 'POST',
       headers:{
         "Content-Type" : "application/json"
@@ -745,7 +745,7 @@ const Upload = () => {
     }
 else{
 
-  fetch("https://fantomsea-api.herokuapp.com/collection/uploadCollection", {
+  fetch("http://localhost:5001/collection/uploadCollection", {
         method : 'POST',
         headers:{
           'Content-Type' : "application/json"
@@ -787,7 +787,7 @@ else{
         }
     
         
-        fetch("https://fantomsea-api.herokuapp.com/nft/uploadSingleNft", {
+        fetch("http://localhost:5001/nft/uploadSingleNft", {
           method : 'POST',
           headers:{
             "Content-Type" : "application/json"

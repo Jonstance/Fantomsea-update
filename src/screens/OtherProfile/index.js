@@ -222,7 +222,7 @@ useEffect(()=>{
 
   setUserAddress(address)
 
-    fetch("https://fantomsea-api.herokuapp.com/users/getUserAccount", {
+    fetch("http://localhost:5001/users/getUserAccount", {
       method : 'POST',
       headers:{
         "Content-Type" : "application/json"

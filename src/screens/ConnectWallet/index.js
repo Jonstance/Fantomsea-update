@@ -121,7 +121,7 @@ console.log(userAccountAddress)
 const isChainRightChain = chainId === 250
 
 if(isChainRightChain){
-    fetch("https://fantomsea-api.herokuapp.com/users/checkIfUserExist", {
+    fetch("http://localhost:5001/users/checkIfUserExist", {
       method:'POST',
       body: JSON.stringify({
         "userAddress" : userAccount
@@ -176,7 +176,7 @@ const createAccount = ()=>{
 
   setShowLoader(true)
 
-  fetch("https://fantomsea-api.herokuapp.com/users/createUser", {
+  fetch("http://localhost:5001/users/createUser", {
   method:'POST',
   body: JSON.stringify({
     "userAddress" : userAccountAddress

@@ -18,7 +18,7 @@ const IndividualCollection = ()=> {
 
     useEffect(()=>{
 
-        fetch('https://fantomsea-api.herokuapp.com/collection/getCollection', {
+        fetch('http://localhost:5001/collection/getCollection', {
             method : 'POST',
             headers:{
                 'Content-type' :'application/json'

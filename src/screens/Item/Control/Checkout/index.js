@@ -140,7 +140,7 @@ const handlePurchaseNft =  async ()=>{
         addressOfPreviousOwner : nftData.nftOwner.userAddress,
         nftID : nftData.nftID
       }
-       fetch("https://fantomsea-api.herokuapp.com/nft/updateNftAfterSale", {
+       fetch("http://localhost:5001/nft/updateNftAfterSale", {
           method : 'POST',
           body:JSON.stringify(updateNFTData),
           headers:{
@@ -171,7 +171,7 @@ const handlePurchaseNft =  async ()=>{
       }
 
       else{
-      //   fetch("https://fantomsea-api.herokuapp.com/nft/putNftOutOfSale", {
+      //   fetch("http://localhost:5001/nft/putNftOutOfSale", {
       //   method : 'POST',
       //   headers:{
       //     'Content-Type' : 'application/json'

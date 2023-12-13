@@ -59,7 +59,7 @@ const client = create("https://ipfs.infura.io:5001/api/v0")
 
 
 useEffect(()=>{
-  fetch("https://fantomsea-api.herokuapp.com/users/getUserAccount", {
+  fetch("http://localhost:5001/users/getUserAccount", {
     method : 'POST',
     headers:{
       "Content-Type" : "application/json"
@@ -99,7 +99,7 @@ const updateUserProfile = ()=>{
 
   console.log(userData)
 
-  fetch("https://fantomsea-api.herokuapp.com/users/updateUserProfile", {
+  fetch("http://localhost:5001/users/updateUserProfile", {
   method:'POST',
   body: JSON.stringify(userData),
   headers:{

@@ -12,7 +12,7 @@ const  AllCollections = ()=> {
 
     useEffect(()=>{
 
-        fetch('https://fantomsea-api.herokuapp.com/collection/getAll')
+        fetch('http://localhost:5001/collection/getAll')
         .then(res=>res.json())
         .then(data=>{
             console.log(data)
@@ -22,7 +22,7 @@ const  AllCollections = ()=> {
     },[])
 
     const getMoreCollections = ()=>{
-        fetch('https://fantomsea-api.herokuapp.com/collection/getMore', {
+        fetch('http://localhost:5001/collection/getMore', {
             method : 'POST',
             headers:{
                 'Content-Type' : 'application/json'

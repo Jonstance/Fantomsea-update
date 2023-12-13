@@ -72,7 +72,7 @@ if(userAccountAddress.trim() === ''){
 
 const handleListAccounttNFts =  async ()=>{
   return new Promise(async (resolve,reject)=>{
-    fetch(`https://fantomsea-api.herokuapp.com/externalData/getNftsInUserWallet`, {
+    fetch(`http://localhost:5001/externalData/getNftsInUserWallet`, {
       method : 'POST',
       headers:{
         'Content-type' : 'application/json'
@@ -138,7 +138,7 @@ const handleProfileCoverChange = async ()=>{
 
     console.log(url)
     setCoverImage(url)
-    const apiResponse = await fetch("https://fantomsea-api.herokuapp.com/users/setProfileCoverUrl", {
+    const apiResponse = await fetch("http://localhost:5001/users/setProfileCoverUrl", {
       method : 'POST',
       headers:{
         'Content-Type' : 'application/json'
@@ -179,7 +179,7 @@ useEffect(async ()=>{
   console.log(addressToUse)
 
 
-    fetch("https://fantomsea-api.herokuapp.com/users/getUserAccount", {
+    fetch("http://localhost:5001/users/getUserAccount", {
       method : 'POST',
       headers:{
         "Content-Type" : "application/json"

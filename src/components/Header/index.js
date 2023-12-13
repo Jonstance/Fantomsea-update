@@ -27,7 +27,7 @@ const INFURA_ID = '60e44de681c94c89b7a6db9447bfd672'
 const providerOptions = {
   walletconnect: {
     package: new WalletConnectProvider({rpc:{
-      250 : "https://rpc.ftm.tools/"
+      97 : "https://data-seed-prebsc-1-s1.binance.org:8545/"
     }}), // required
     
   },
@@ -39,7 +39,7 @@ const providerOptions = {
         appName,
         
       })
-      const provider = walletLink.makeWeb3Provider("https://rpc.ftm.tools/", 250)
+      const provider = walletLink.makeWeb3Provider("https://data-seed-prebsc-1-s1.binance.org:8545/", 97)
       await provider.enable()
       return provider
     },
@@ -47,7 +47,7 @@ const providerOptions = {
 }
 
 const web3Modal = new Web3Modal({
-  network: "mainnet",
+  network: "testnet",
   cacheProvider: true,
   providerOptions
 });
@@ -154,7 +154,7 @@ const Headers = () => {
 
     if(userAddress.addressFound === true){
       setUserAccountAddress(userAddress.userAddress)
-      fetch("https://fantomsea-api.herokuapp.com/users/getUserAccount", {
+      fetch("http://localhost:5001/users/getUserAccount", {
         method : 'POST',
         headers:{
           "Content-Type" : "application/json"
@@ -173,7 +173,7 @@ const Headers = () => {
           setUserData(data.userData)
 
 
-          fetch(`https://fantomsea-api.herokuapp.com/externalData/getUserBalance`, {
+          fetch(`http://localhost:5001/externalData/getUserBalance`, {
           method : 'POST',
           headers:{
             'Content-type' : 'application/json'

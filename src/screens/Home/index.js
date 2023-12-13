@@ -24,7 +24,7 @@ const Home = () => {
 
   useEffect(()=>{
 
-    fetch("https://fantomsea-api.herokuapp.com/data/getHomePageData")
+    fetch("http://localhost:5001/data/getHomePageData")
     .then(res=>res.json())
     .then(data=>{
       console.log(data)
