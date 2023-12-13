@@ -565,7 +565,7 @@ catch(e){
       </div>
       {
         currentUserAddress === nftData.nftOwner.userAddress ? <div className={styles.note}>
-        You can sell this token on Fantomsea
+        You can sell this token on Billisea
       </div> : ""
       }
       

@@ -1,11 +1,11 @@
 export const setLocalStorageData = (userAddress)=>{
 
-    localStorage.setItem('fantomSeaAddress', userAddress)
+    localStorage.setItem('BilliseaAddress', userAddress)
     return true
 }
 
 export const getLocalStorage = ()=>{
-    let storedItem = localStorage.getItem('fantomSeaAddress')
+    let storedItem = localStorage.getItem('BilliseaAddress')
 
     if(storedItem !== null){
         return {
@@ -22,6 +22,6 @@ export const getLocalStorage = ()=>{
 
 export const clearLocalStorage = ()=>{
 
-localStorage.clear('fantomSeaAddress')
+localStorage.clear('BilliseaAddress')
 
 }

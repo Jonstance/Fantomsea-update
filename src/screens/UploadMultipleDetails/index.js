@@ -85,7 +85,7 @@ const Upload = () => {
 
   const [nftCreatorAddress, setNftCreatorAddress] = useState("0x5c80363463A7d0472Addec5DAbD9ACFdcDE33f6a".toLowerCase())
  
-  const [collectionName, setCollectionName] = useState("FantomSea Multiple")
+  const [collectionName, setCollectionName] = useState("Billisea Multiple")
   
   const [collectionTicker, setCollectionTicker] = useState("FSEA")
 

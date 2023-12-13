@@ -73,7 +73,7 @@ useEffect(()=>{
     console.log(data, userAccountAddress)
     const {userData} = data
     console.log(userData) 
-    setUserBio(userData.bio)
+    //setUserBio(userData.bio)
     setTwitterUserName(userData.twitter)
     setDisplayName(userData.username)
     setWebsiteUrl(userData.website)
@@ -206,7 +206,7 @@ const added =  await client.add(file, {
                       name="Url"
                       type="text"
                       value={customUrl}
-                      placeholder="fantomsea.com/Your custom URL"
+                      placeholder="Billisea.com/Your custom URL"
                       required
                     />
                     <TextArea

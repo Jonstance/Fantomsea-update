@@ -214,7 +214,7 @@ const Headers = () => {
     const chainId =  await web3.eth.getChainId()
 
     console.log(chainId)
-    if(chainId !== 250){
+    if(chainId !== 97){
       setShowModal(true)
     }
 

@@ -83,7 +83,7 @@ const Upload = () => {
 
   const [nftType, setNftType]  = useState('')
 
-  const [collectionName, setCollectionName] = useState("FantomSea")
+  const [collectionName, setCollectionName] = useState("Billisea")
   
   const [collectionTicker, setCollectionTicker] = useState("FSEA")
 
@@ -951,7 +951,7 @@ else{
                       name="Item"
                       type="text"
                       setinputchange={(value)=>setExternalLink(value)}
-                      placeholder='https://fantomsea.com/item/123'
+                      placeholder='https://Billisea.com/item/123'
                       required
                     />
                     }

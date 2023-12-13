@@ -20,7 +20,7 @@ contract NFT is ERC721URIStorage{
     address contractAddress;
     address adminAddress;
 
-    constructor(address marketplaceAddress, address administratorAddress) ERC721("Fantomsea Tokens", "FSEA"){
+    constructor(address marketplaceAddress, address administratorAddress) ERC721("Billisea Tokens", "FSEA"){
         contractAddress = marketplaceAddress;
         adminAddress = administratorAddress;
     }

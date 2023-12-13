@@ -13,7 +13,7 @@ const items = [
     menu: [
       {
         title: "Twitter",
-        url: "https://twitter.com/FantomSea",
+        url: "https://twitter.com/Billisea",
       },
       {
         title: "Discord",
@@ -25,7 +25,7 @@ const items = [
       // },
       {
         title: "Telegram",
-        url: "https://t.me/FantomSea",
+        url: "https://t.me/Billisea",
       },
     ],
   },
@@ -67,7 +67,7 @@ const Footers = () => {
         </div>
         <div className={styles.foot}>
           <div className={styles.copyright}>
-          Copyright © 2021 FantomSea. All rights reserved
+          Copyright © 2023 Billisea. All rights reserved
           </div>
           <div className={styles.note}>
             We use cookies for better service. <a href="/#">Accept</a>

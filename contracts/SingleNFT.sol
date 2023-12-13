@@ -14,7 +14,7 @@ contract SingleNFT is ERC721URIStorage{
     Counters.Counter private _tokenIds;
     address contractAddress;
 
-    constructor(address marketplaceAddress)ERC721("Fantomsea Tokens", "FSEA"){
+    constructor(address marketplaceAddress)ERC721("Billisea Tokens", "FSEA"){
         contractAddress = marketplaceAddress;
     }
     

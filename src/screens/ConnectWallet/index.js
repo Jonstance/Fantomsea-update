@@ -20,7 +20,7 @@ const INFURA_ID = '60e44de681c94c89b7a6db9447bfd672'
 const providerOptions = {
   walletconnect: {
     package: new WalletConnectProvider({rpc:{
-      250 : "https://rpc.ftm.tools/"
+      97 : "https://data-seed-prebsc-1-s1.binance.org:8545/"
     }}), // required
     
   },
@@ -32,7 +32,7 @@ const providerOptions = {
         appName,
         
       })
-      const provider = walletLink.makeWeb3Provider("https://rpc.ftm.tools/", 250)
+      const provider = walletLink.makeWeb3Provider("https://data-seed-prebsc-1-s1.binance.org:8545/", 97)
       await provider.enable()
       return provider
     },
@@ -40,7 +40,7 @@ const providerOptions = {
 }
 
 const web3Modal = new Web3Modal({
-  network: "mainnet",
+  network: "testnet",
   cacheProvider: true,
   providerOptions
 });
@@ -94,7 +94,7 @@ provider.on("accountsChanged", (accounts)=>{
 })
 
 provider.on("chainChanged", (changedId)=>{
-  if(changedId.toLowerCase() ===  "0xfa"){
+  if(changedId.toLowerCase() ===  "97"){
     setShowModal(false)
   }
   else{
@@ -118,7 +118,7 @@ setUserAccountAddress(userAccount)
 console.log(userAccountAddress)
 
 
-const isChainRightChain = chainId === 250
+const isChainRightChain = chainId === 97
 
 if(isChainRightChain){
     fetch("http://localhost:5001/users/checkIfUserExist", {
@@ -225,7 +225,7 @@ const createAccount = ()=>{
             <br/> <br/>
 
             <p style={{textAlign:"center"}}>
-              Please Change the Network to the Fantom Opera Network  to access your account
+              Please Change the Network to the BSC Testnet Network  to access your account
             </p>
 
               <br/> <br/>
