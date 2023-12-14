@@ -46,7 +46,7 @@ const  AllCollections = ()=> {
     return (
         <div>
 
-                <h1 style={{textAlign:'center', marginTop:'10px'}}> All Collections in Fantom Sea </h1>
+                <h1 style={{textAlign:'center', marginTop:'10px'}}> All Collections in Billisea </h1>
 
             <Discover collectionData={arrayOfAllCollections} CollectionCover={CollectionCover} />
 
