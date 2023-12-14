@@ -365,8 +365,9 @@ const Upload = () => {
       const transaction = await nftContract.createToken(url, {gasPrice:gasPrice, gasLimit:1000000})
     
       let txDetails = await transaction.wait()
-      console.log("tx:" + txDetails)
-      console.log("tx:" + transaction)
+      const eventr = txDetails.events.find((event) => event.event === "Transfer");
+      const tokenId = eventr.args.tokenId.toString();
+      console.log("Newly created token ID:", tokenId);
 
       let event = Web3.utils.hexToNumber(txDetails.receipt.rawLogs[0].topics[3])
       let value = event.args[2]
