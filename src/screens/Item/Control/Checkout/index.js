@@ -23,7 +23,7 @@ const Checkout = ({ className , nftData, updateTransactionId, setPurchased, onCa
 
   const [nftCreatorAddress, setNftCreatorAddress] =  useState("")
 
-const nftMarketaddress = "0x60601D627020Cc125D68E3EC71A862ad389c3f3e"
+const nftMarketaddress = "0x05f400E539c1732269e4d660B60FB97F52D20b3d"
 
 
 const [isPurchaseInProgress, setIsPurchaseInProgress] = useState(false)  
@@ -38,11 +38,11 @@ useEffect(()=>{
 const items = [
   {
     title: "Price",
-    value:`${nftData.nftPrice}  FTM`,
+    value:`${nftData.nftPrice}  BCAT`,
   },
   {
     title: "Your balance",
-    value: `${userBalance.toFixed(2)} FTM`,
+    value: `${userBalance.toFixed(2)} BCAT`,
   },
 ];
 

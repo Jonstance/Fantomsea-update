@@ -289,7 +289,7 @@ const Search = () => {
         <div className={styles.row}>
           <div className={styles.filters}>
             <div className={styles.range}>
-              <div className={styles.label}>{`Price range(0 -  ${values} ) FTM `} </div>
+              <div className={styles.label}>{`Price range(0 -  ${values} ) BCAT `} </div>
               {/* <Range
                 values={values}
                 step={STEP}
@@ -366,8 +366,8 @@ const Search = () => {
               />
 
               {/* <div className={styles.scale}>
-                <div className={styles.number}>0.01 FTM</div>
-                <div className={styles.number}>{MAX} FTM</div>
+                <div className={styles.number}>0.01 BCAT</div>
+                <div className={styles.number}>{MAX} BCAT</div>
               </div> */}
             </div>
             <div className={styles.group}>

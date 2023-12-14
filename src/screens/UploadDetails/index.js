@@ -18,8 +18,10 @@ import {AppContext} from '../../context/context'
 import CreateCollection from "./CreateCollection/index"
 import moment from 'moment'
 import * as musicMetaData from 'music-metadata-browser'
+import { uploadFileToIPFS, uploadJSONToIPFS } from '../../utils/pinata'
 
 import NFTMarketABI from '../../ABIs/contracts/Market.sol/marketABI.json'
+import Web3 from "web3";
 
 
 import NFTABI from '../../ABIs/contracts/SingleNFT.sol/SingleNFTAbi.json'
@@ -101,7 +103,7 @@ const Upload = () => {
 
   const client = create("https://ipfs.infura.io:5001/api/v0")
 
-  const nftMarketaddress = "0x60601D627020Cc125D68E3EC71A862ad389c3f3e"
+  const nftMarketaddress = "0x05f400E539c1732269e4d660B60FB97F52D20b3d"
 
   useEffect(()=>{
     if(importNFTMode){
@@ -242,16 +244,14 @@ const Upload = () => {
   const UploadImageToIPFS = async (file)=>{
    try{
 
-      const added =  await client.add(file, {
-      })
+    const response = await uploadFileToIPFS(file);
+    if(response.success === true) {
+     console.log("Uploaded image to Pinata: ", response.pinataURL)
+     console.log(response.pinataURL)
+   
+     setFileUrl(response.pinataURL)
 
-      const v1Cid = added.cid.toV1()
-      const urlPath = v1Cid.toString()
-      const url = `https://${urlPath}.ipfs.infura-ipfs.io`
-
-      console.log(url)
-
-      setFileUrl(url)
+    }
     }
     catch(e){
       console.log(e)
@@ -262,14 +262,15 @@ const Upload = () => {
   const uploadMediaFileToIPFS =  async(file)=>{
     
     try{
-      const added = await client.add(file, {
-      })
-      const v1Cid = added.cid.toV1()
-      const urlPath = v1Cid.toString()
-      const url = `https://${urlPath}.ipfs.infura-ipfs.io`
+      const response = await uploadFileToIPFS(file);
 
-      console.log(url)
-      setnftMediaUrl(url)
+      if(response.success === true) {
+        console.log("Uploaded image to Pinata: ", response.pinataURL)
+        console.log(response.pinataURL)
+      
+        setnftMediaUrl(response.pinataURL)
+   
+       }
     }
     catch(e){
       console.log(e)
@@ -320,12 +321,13 @@ const Upload = () => {
       console.log(nftData)
   
       try{
-  
-        const added = await client.add(nftData)
-        const tokenUrI =  `https://ipfs.infura.io/ipfs/${added.path}`
-        console.log(tokenUrI)
-        createNFTSaleItem(tokenUrI)
+        const response = await uploadJSONToIPFS(nftData);
+        if(response.success === true){
+          console.log("Uploaded JSON to Pinata: ", response)       
+        console.log(response.pinataURL)
+        createNFTSaleItem(response.pinataURL)
       }
+    }
       catch(e){
   
         console.log("An Error occured", e)
@@ -363,8 +365,10 @@ const Upload = () => {
       const transaction = await nftContract.createToken(url, {gasPrice:gasPrice, gasLimit:1000000})
     
       let txDetails = await transaction.wait()
-      let event = txDetails.events[0]
-      console.log(event)
+      console.log("tx:" + txDetails)
+      console.log("tx:" + transaction)
+
+      let event = Web3.utils.hexToNumber(txDetails.receipt.rawLogs[0].topics[3])
       let value = event.args[2]
       let nftTokenId = value.toNumber()
   
@@ -1062,7 +1066,7 @@ else{
   min={0}
   value={itemPrice}
   setinputchange={(value)=>handleSetItemPrice(value)}
-  placeholder='0 FTM'
+  placeholder='0 BCAT'
   required
 />  : ""
 }
@@ -1075,7 +1079,7 @@ else{
   type="number"
   min={0}
   setinputchange={(value)=>setReserevedPrice(value)}
-  placeholder='0 FTM'
+  placeholder='0 BCAT'
   required
 /> : ""
 }
@@ -1112,7 +1116,7 @@ else{
                 <Cards className={styles.cards} items={items} /> */}
               </div>
              
-            <p>Listing Fee : 1 FTM </p>
+            <p>Listing Fee : 1 BCAT </p>
                 <p> 2.5% Service Fee will be deducted when sold</p>
                 <br/> <br/>
               <div className={styles.foot}>

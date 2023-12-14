@@ -9,6 +9,7 @@ import Icon from "../../components/Icon";
 import { AppContext } from "../../context/context";
 import {create} from 'ipfs-http-client'
 import {getLocalStorage} from '../../utils/localUtils'
+import { uploadFileToIPFS } from '../../utils/pinata'
 
 
 const breadcrumbs = [
@@ -74,7 +75,7 @@ useEffect(()=>{
     const {userData} = data
     console.log(userData) 
     //setUserBio(userData.bio)
-    setTwitterUserName(userData.twitter)
+    //setTwitterUserName(userData.twitter)
     setDisplayName(userData.username)
     setWebsiteUrl(userData.website)
     setCustomUrl(userData.customUrl)
@@ -124,18 +125,17 @@ const handleAvatarChange = async (event)=>{
  const localUrl =  URL.createObjectURL(file)
 
  setFileLocalUrl(localUrl)
+ const response = await uploadFileToIPFS(file);
+ if(response.success === true) {
+  console.log("Uploaded image to Pinata: ", response.pinataURL)
+  console.log(response.pinataURL)
 
-const added =  await client.add(file, {
-      })
+      setAvatarLink(response.pinataURL)
 
-      const v1Cid = added.cid.toV1()
-      const urlPath = v1Cid.toString()
-      const url = `https://${urlPath}.ipfs.infura-ipfs.io`
+}
 
-      console.log(url)
 
-      setAvatarLink(url)
-
+      
 }
 
   return (

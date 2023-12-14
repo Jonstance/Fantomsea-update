@@ -24,7 +24,7 @@ const Bids =  ({nftBids})=> {
                     </img>
                     <div>
                       <div style={{marginLeft : "30px"}} className={styles.position}>
-                          <p></p>{`${nameOfUser}  placed a bid of ${valueOfBid} FTM`}</div>
+                          <p></p>{`${nameOfUser}  placed a bid of ${valueOfBid} BCAT`}</div>
                       <div 
                       style={{marginLeft : "30px"}}
                       className={styles.name}>at {timeInText}</div>

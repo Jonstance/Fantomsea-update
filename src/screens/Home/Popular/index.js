@@ -17,7 +17,7 @@ const items = [
     color: "#3772FF",
     avatar: "/images/content/avatar-5.jpg",
     reward: "/images/content/reward-1.svg",
-    price: "<span>2.456</span> FTM",
+    price: "<span>2.456</span> BCAT",
   },
   {
     name: "Odell Hane",
@@ -27,7 +27,7 @@ const items = [
     color: "#9757D7",
     avatar: "/images/content/avatar-6.jpg",
     reward: "/images/content/reward-1.svg",
-    price: "<span>2.456</span> FTM",
+    price: "<span>2.456</span> BCAT",
   },
   {
     name: "Marlee Kuphal",
@@ -37,7 +37,7 @@ const items = [
     color: "#45B26B",
     avatar: "/images/content/avatar-7.jpg",
     reward: "/images/content/reward-1.svg",
-    price: "<span>2.456</span> FTM",
+    price: "<span>2.456</span> BCAT",
   },
   {
     name: "Payton Kunde",
@@ -47,7 +47,7 @@ const items = [
     color: "#23262F",
     avatar: "/images/content/avatar-8.jpg",
     reward: "/images/content/reward-1.svg",
-    price: "<span>2.456</span> FTM",
+    price: "<span>2.456</span> BCAT",
   },
   {
     name: "Payton Buckridge",
@@ -57,7 +57,7 @@ const items = [
     color: "#777E90",
     avatar: "/images/content/avatar-9.jpg",
     reward: "/images/content/reward-1.svg",
-    price: "<span>2.456</span> FTM",
+    price: "<span>2.456</span> BCAT",
   },
   {
     name: "Edd Harris",
@@ -67,7 +67,7 @@ const items = [
     color: "#3772FF",
     avatar: "/images/content/avatar-5.jpg",
     reward: "/images/content/reward-1.svg",
-    price: "<span>2.456</span> FTM",
+    price: "<span>2.456</span> BCAT",
   },
   {
     name: "Odell Hane",
@@ -77,7 +77,7 @@ const items = [
     color: "#9757D7",
     avatar: "/images/content/avatar-6.jpg",
     reward: "/images/content/reward-1.svg",
-    price: "<span>2.456</span> FTM",
+    price: "<span>2.456</span> BCAT",
   },
   {
     name: "Marlee Kuphal",
@@ -87,7 +87,7 @@ const items = [
     color: "#45B26B",
     avatar: "/images/content/avatar-7.jpg",
     reward: "/images/content/reward-1.svg",
-    price: "<span>2.456</span> FTM",
+    price: "<span>2.456</span> BCAT",
   },
 ];
 

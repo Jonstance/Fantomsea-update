@@ -35,7 +35,7 @@ const Preview = ({ className, onClose, imageUrl, mediaUrl, fileType, isNotImage,
             <div className={styles.body}>
               <div className={styles.line}>
                 <div className={styles.title} name="namepreview">{itemName}</div>
-                <div className={styles.price}>{itemPrice} FTM</div>
+                <div className={styles.price}>{itemPrice} BCAT</div>
               </div>
               <div className={styles.line}>
                 <div className={styles.users}>
@@ -55,7 +55,7 @@ const Preview = ({ className, onClose, imageUrl, mediaUrl, fileType, isNotImage,
             <div className={styles.foot}>
               <div className={styles.status}>
                 <Icon name="candlesticks-up" size="20" />
-                Highest Bid <span>{startingPrice} FTM</span>
+                Highest Bid <span>{startingPrice} BCAT</span>
               </div>
               <div className={styles.bid}>
                 New bid

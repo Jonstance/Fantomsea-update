@@ -16,7 +16,7 @@ const items = [
   {
     title: "the creator network®",
     creator: "Enrico Cole",
-    currency: "1.00 FTM",
+    currency: "1.00 BCAT",
     price: "$3,618.36",
     avatar: "/images/content/avatar-creator.jpg",
     image: "/images/content/video-preview.jpg",
@@ -25,7 +25,7 @@ const items = [
   {
     title: "Marco carrillo®",
     creator: "Enrico Cole",
-    currency: "2.00 FTM",
+    currency: "2.00 BCAT",
     price: "$2,477.92",
     avatar: "/images/content/avatar-creator.jpg",
     image: "/images/content/video-preview.jpg",
@@ -34,7 +34,7 @@ const items = [
   {
     title: "the creator network®",
     creator: "Enrico Cole",
-    currency: "1.00 FTM",
+    currency: "1.00 BCAT",
     price: "$3,618.36",
     avatar: "/images/content/avatar-creator.jpg",
     image: "/images/content/video-preview.jpg",
@@ -43,7 +43,7 @@ const items = [
   {
     title: "Marco carrillo®",
     creator: "Enrico Cole",
-    currency: "2.00 FTM",
+    currency: "2.00 BCAT",
     price: "$2,477.92",
     avatar: "/images/content/avatar-creator.jpg",
     image: "/images/content/video-preview.jpg",
@@ -95,7 +95,7 @@ const Hero = ({featuredAuctions}) => {
       return {
         title : eachAuction.nftName,
         creator : eachAuction.nftOwner.userName,
-        currency : `${eachAuction.auctionStartingPrice} FTM` ,
+        currency : `${eachAuction.auctionStartingPrice} BCAT` ,
         price : `${eachAuction.auctionStartingPrice}`,
         avatar: eachAuction.nftOwner.avatar,
         image : eachAuction.nftDigitalUrl,
@@ -157,7 +157,7 @@ const Hero = ({featuredAuctions}) => {
             <h2 className={cn("h4", styles.title)}>
             All in one NFT platform. Powered by 
             </h2>
-            <span className={cn("h4", styles.blue)}>Fantom.</span>
+            <span className={cn("h4", styles.blue)}>BSC Chain</span>
            <br/>
            <br/>
             <Link className={cn("button-stroke", styles.button)} to="/discover">
@@ -188,14 +188,14 @@ const Hero = ({featuredAuctions}) => {
                           </div>
                           <div className={styles.description}>
                             <div className={styles.category}>Reserved Price</div>
-                            <div className={styles.text}>{x.price}FTM</div>
+                            <div className={styles.text}>{x.price}BCAT</div>
                           </div>
                         </div>
                       </div>
                       <div className={styles.wrap}>
                         <div className={styles.info}>Current Bid</div>
-                        <div className={styles.currency}>{x.highestBid} FTM </div>
-                        <div className={styles.price}>{x.highestBid} FTM - ${(x.highestBid * fantomPriceInDollars).toFixed(4)} </div>
+                        <div className={styles.currency}>{x.highestBid} BCAT </div>
+                        <div className={styles.price}>{x.highestBid} BCAT - ${(x.highestBid * fantomPriceInDollars).toFixed(4)} </div>
                         <div className={styles.info}>
                           {
                             x.isDeadeLineMet ? `Auction has Ended on ${x.deadline}` : `Auction ending at ${x.deadline}`

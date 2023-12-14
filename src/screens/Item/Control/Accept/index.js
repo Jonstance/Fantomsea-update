@@ -9,11 +9,11 @@ const Accept = ({ className, listNftInMarket, nftData, nftHighestBid }) => {
   const items = [
     {
       title: "Service fee",
-      value: "0.025 FTM",
+      value: "0.025 BCAT",
     },
     {
       title: "Total bid amount",
-      value: `${nftHighestBid.valueOfBid} FTM`,
+      value: `${nftHighestBid.valueOfBid} BCAT`,
     },
   ];
 
@@ -26,7 +26,7 @@ const Accept = ({ className, listNftInMarket, nftData, nftHighestBid }) => {
           <strong>{nftHighestBid.nameOfUser}</strong>
         </div>
       </div>
-      <div className={styles.stage}>{ nftHighestBid.valueOfBid } FTM for {nftData.numberInStock} Copy </div>
+      <div className={styles.stage}>{ nftHighestBid.valueOfBid } BCAT for {nftData.numberInStock} Copy </div>
       <div className={styles.table}>
         {items.map((x, index) => (
           <div className={styles.row} key={index}>

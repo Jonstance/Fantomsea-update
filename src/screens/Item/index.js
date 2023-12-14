@@ -354,7 +354,7 @@ const jsmediatags = window.jsmediatags
               isExternalNFTViewed === false ?
           <div className={styles.cost}>
             <div className={cn("status-stroke-green", styles.price)}>
-              {nftData.nftPrice}FTM
+              {nftData.nftPrice}BCAT
             </div>
              <div className={cn("status-stroke-black", styles.price)}>
               ${priceInDollars.toFixed(2)}

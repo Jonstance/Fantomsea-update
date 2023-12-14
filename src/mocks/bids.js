@@ -1,8 +1,8 @@
 export const bids = [
   {
     title: "Amazing digital art",
-    price: "2.45 FTM",
-    highestBid: "0.001 FTM",
+    price: "2.45 BCAT",
+    highestBid: "0.001 BCAT",
     counter: "3 in stock",
     bid: 'New bid <span role="img" aria-label="fire">🔥</span>',
     image: "/images/content/card-pic-1.jpg",
@@ -24,8 +24,8 @@ export const bids = [
   },
   {
     title: "Ribbon Hunter",
-    price: "2.45 FTM",
-    highestBid: "0.001 FTM",
+    price: "2.45 BCAT",
+    highestBid: "0.001 BCAT",
     counter: "3 in stock",
     bid: 'New bid <span role="img" aria-label="fire">🔥</span>',
     image: "/images/content/card-pic-2.jpg",
@@ -44,8 +44,8 @@ export const bids = [
   },
   {
     title: "Amazing digital art",
-    price: "2.45 FTM",
-    highestBid: "0.001 FTM",
+    price: "2.45 BCAT",
+    highestBid: "0.001 BCAT",
     counter: "3 in stock",
     bid: 'New bid <span role="img" aria-label="fire">🔥</span>',
     image: "/images/content/card-pic-3.jpg",
@@ -67,8 +67,8 @@ export const bids = [
   },
   {
     title: "Amazing digital art",
-    price: "2.45 FTM",
-    highestBid: "0.001 FTM",
+    price: "2.45 BCAT",
+    highestBid: "0.001 BCAT",
     counter: "3 in stock",
     bid: 'New bid <span role="img" aria-label="fire">🔥</span>',
     image: "/images/content/card-pic-4.jpg",
@@ -87,8 +87,8 @@ export const bids = [
   },
   {
     title: "Ribbon Hunter",
-    price: "2.45 FTM",
-    highestBid: "0.001 FTM",
+    price: "2.45 BCAT",
+    highestBid: "0.001 BCAT",
     counter: "3 in stock",
     bid: 'New bid <span role="img" aria-label="fire">🔥</span>',
     image: "/images/content/card-pic-5.jpg",
@@ -110,8 +110,8 @@ export const bids = [
   },
   {
     title: "Amazing digital art",
-    price: "2.45 FTM",
-    highestBid: "0.001 FTM",
+    price: "2.45 BCAT",
+    highestBid: "0.001 BCAT",
     counter: "3 in stock",
     bid: 'New bid <span role="img" aria-label="fire">🔥</span>',
     image: "/images/content/card-pic-6.jpg",
@@ -130,8 +130,8 @@ export const bids = [
   },
   {
     title: "Amazing digital art",
-    price: "2.45 FTM",
-    highestBid: "0.001 FTM",
+    price: "2.45 BCAT",
+    highestBid: "0.001 BCAT",
     counter: "3 in stock",
     bid: 'New bid <span role="img" aria-label="fire">🔥</span>',
     image: "/images/content/card-pic-7.jpg",
@@ -150,8 +150,8 @@ export const bids = [
   },
   {
     title: "Amazing digital art",
-    price: "2.45 FTM",
-    highestBid: "0.001 FTM",
+    price: "2.45 BCAT",
+    highestBid: "0.001 BCAT",
     counter: "3 in stock",
     bid: 'New bid <span role="img" aria-label="fire">🔥</span>',
     image: "/images/content/card-pic-1.jpg",

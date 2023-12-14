@@ -7,8 +7,8 @@ import Icon from "../../Icon";
 
 const items = [
   {
-    title: "FTM received",
-    price: "0.08 FTM recived",
+    title: "BCAT received",
+    price: "0.08 BCAT recived",
     date: "2 days ago",
     color: "#3772FF",
     image: "/images/content/notification-pic-1.jpg",
@@ -16,23 +16,23 @@ const items = [
   },
   {
     title: "C O I N Z",
-    price: "New bid 0.2 FTM",
+    price: "New bid 0.2 BCAT",
     date: "3 days ago",
     color: "#3772FF",
     image: "/images/content/notification-pic-2.jpg",
     url: "/activity",
   },
   {
-    title: "FTM received",
-    price: "0.08 FTM recived",
+    title: "BCAT received",
+    price: "0.08 BCAT recived",
     date: "4 days ago",
     color: "#3772FF",
     image: "/images/content/notification-pic-3.jpg",
     url: "/activity",
   },
   {
-    title: "FTM received",
-    price: "0.08 FTM recived",
+    title: "BCAT received",
+    price: "0.08 BCAT recived",
     date: "5 days ago",
     color: "#3772FF",
     image: "/images/content/notification-pic-4.jpg",

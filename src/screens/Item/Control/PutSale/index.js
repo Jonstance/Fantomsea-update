@@ -9,7 +9,7 @@ import TextInput from "../../../../components/TextInput";
 const items = [
   {
     title: "Enter your price",
-    value: "FTM",
+    value: "BCAT",
   },
   {
     title: "Service fee",

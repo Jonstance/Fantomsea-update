@@ -21,7 +21,7 @@ import coingecko from 'coingecko-api'
 const Control = ({ className, nftData, currentUserAddress, setItemData, setNftAuctionData, nftAuctionData, priceInDollars }) => {
 
 
-  const nftMarketaddress = "0x60601D627020Cc125D68E3EC71A862ad389c3f3e"
+  const nftMarketaddress = "0x05f400E539c1732269e4d660B60FB97F52D20b3d"
 
   const [visibleModalPurchase, setVisibleModalPurchase] = useState(false);
   const [visibleModalBid, setVisibleModalBid] = useState(false);
@@ -422,7 +422,7 @@ catch(e){
             Owned by  <span>{nftData.nftOwner.userName}</span>
           </div>
           {/* <div className={styles.cost}>
-            <div className={styles.price}>1.46 FTM</div>
+            <div className={styles.price}>1.46 BCAT</div>
             <div className={styles.price}>$2,764.89</div>
           </div> */}
         </div>  : nftAuctionData.nftAuctionBids.length !== 0 ?  <div className={styles.details}>
@@ -434,7 +434,7 @@ catch(e){
             Highest bid by <span>{highestBid.nameOfUser}</span>
           </div>
           <div className={styles.cost}>
-            <div className={styles.price}>{highestBid.valueOfBid } FTM</div>
+            <div className={styles.price}>{highestBid.valueOfBid } BCAT</div>
             <div className={styles.price}>{`$${Number(highestBidInDollars).toFixed(5)}`}</div>
           </div>
           <br/>
@@ -549,7 +549,7 @@ catch(e){
     
       <div className={styles.text}>
         Service fee <span className={styles.percent}>2.5%</span>{" "}
-        <span>{nftData.nftPrice} FTM</span> <span>${(priceInDollars * (2.5/100)).toFixed(4)}</span>
+        <span>{nftData.nftPrice} BCAT</span> <span>${(priceInDollars * (2.5/100)).toFixed(4)}</span>
       </div>
       <div className={styles.foot}>
         {/* {

@@ -6,19 +6,19 @@ import Icon from "../../../components/Icon";
 
 const items = [
   {
-    title: "The future of FTM®",
+    title: "The future of BCAT®",
     content: "Highest bid",
     counter: "18 in stock",
-    price: "1.125 FTM",
+    price: "1.125 BCAT",
     url: "/item",
     avatar: "/images/content/avatar-1.jpg",
     image: "/images/content/selection-pic-1.jpg",
     image2x: "/images/content/selection-pic-1@2x.jpg",
   },
   {
-    title: "FTM never die",
+    title: "BCAT never die",
     content: "1 of 12",
-    price: "0.27 FTM",
+    price: "0.27 BCAT",
     url: "/item",
     avatar: "/images/content/avatar-4.jpg",
     image: "/images/content/selection-pic-2.jpg",
@@ -27,7 +27,7 @@ const items = [
   {
     title: "Future coming soon",
     content: "1 of 3",
-    price: "0.27 FTM",
+    price: "0.27 BCAT",
     url: "/item",
     avatar: "/images/content/avatar-3.jpg",
     image: "/images/content/selection-pic-1.jpg",
@@ -36,7 +36,7 @@ const items = [
   {
     title: "Elon Musk silver coin 3d print",
     content: "1 of 4",
-    price: "0.27 FTM",
+    price: "0.27 BCAT",
     url: "/item",
     avatar: "/images/content/avatar-4.jpg",
     image: "/images/content/selection-pic-3.jpg",
@@ -47,25 +47,25 @@ const items = [
 const users = [
   {
     name: "Payton Harris",
-    price: "<span>2.456</span> FTM",
+    price: "<span>2.456</span> BCAT",
     counter: "6",
     avatar: "/images/content/avatar-1.jpg",
   },
   {
     name: "Anita Bins",
-    price: "<span>2.456</span> FTM",
+    price: "<span>2.456</span> BCAT",
     counter: "2",
     avatar: "/images/content/avatar-2.jpg",
   },
   {
     name: "Joana Wuckert",
-    price: "<span>2.456</span> FTM",
+    price: "<span>2.456</span> BCAT",
     counter: "3",
     avatar: "/images/content/avatar-3.jpg",
   },
   {
     name: "Lorena Ledner",
-    price: "<span>2.456</span> FTM",
+    price: "<span>2.456</span> BCAT",
     counter: "4",
     avatar: "/images/content/avatar-4.jpg",
   },
@@ -82,7 +82,7 @@ const Selection = ({featuredNFTs}) => {
     title: eachNftObject.nftName,
     content: "NFT Item",
     counter: `${eachNftObject.numberInStock} in stock`,
-    price: `${eachNftObject.nftPrice} FTM`,
+    price: `${eachNftObject.nftPrice} BCAT`,
     url: `/nft/${eachNftObject.nftID}`,
     avatar: eachNftObject.nftOwner.avatar,
     image: eachNftObject.nftDigitalUrl,

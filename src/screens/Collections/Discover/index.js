@@ -289,8 +289,8 @@ const Discover = ({nfts}) => {
                 )}
               />
               <div className={styles.scale}>
-                <div className={styles.number}> {MIN} FTM</div>
-                <div className={styles.number}>{MAX} FTM</div>
+                <div className={styles.number}> {MIN} </div>
+                <div className={styles.number}>{MAX} </div>
               </div>
             </div>
           </div>

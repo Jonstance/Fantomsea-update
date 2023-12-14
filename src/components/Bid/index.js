@@ -13,11 +13,11 @@ const Bid = ({ className, nftData, currentUserAddress , closeBid, updateNftAucti
   const items = [
     {
       title: "Enter bid",
-      value: "FTM",
+      value: "BCAT",
     },
     {
       title: "Your balance",
-      value: `${userBalance} FTM`,
+      value: `${userBalance} BCAT`,
     }
   ];
 

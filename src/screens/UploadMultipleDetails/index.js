@@ -97,7 +97,7 @@ const Upload = () => {
   const client = create("https://ipfs.infura.io:5001/api/v0")
 
 
-  const nftMarketaddress = "0x7c1250208F5dc01D95F1EaD73669dd91878464c6"
+  const nftMarketaddress = "0x05f400E539c1732269e4d660B60FB97F52D20b3d"
 
 
   useEffect(()=>{
@@ -733,7 +733,7 @@ const Upload = () => {
   name="Price"
   type="text"
   setinputchange={(value)=>setItemPrice(value)}
-  placeholder='0 FTM'
+  placeholder='0 BCAT'
   required
 />  : ""
 }
@@ -745,7 +745,7 @@ const Upload = () => {
   name="Reserved Price"
   type="text"
   setinputchange={(value)=>setReserevedPrice(value)}
-  placeholder='0 FTM'
+  placeholder='0 BCAT'
   required
 /> : ""
 }

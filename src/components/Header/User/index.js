@@ -66,7 +66,7 @@ const User = ({ className }) => {
             <img src={userData.avatar} />
           </div>
           <div className={styles.wallet}>
-            {userBalance.toFixed(2)}  <span className={styles.currency}>FTM</span>
+            {userBalance.toFixed(2)}  <span className={styles.currency}>BCAT</span>
           </div>
         </div>
         {visible && (
@@ -87,7 +87,7 @@ const User = ({ className }) => {
                 </div>
                 <div className={styles.details}>
                   <div className={styles.info}>Balance</div>
-                  <div className={styles.price}>{userBalance.toFixed(2)} FTM</div>
+                  <div className={styles.price}>{userBalance.toFixed(2)} BCAT</div>
                 </div>
               </div>
               {/* <button
