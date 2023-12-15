@@ -246,7 +246,7 @@ const Headers = () => {
             <br/> <br/>
 
             <p style={{textAlign:"center"}}>
-              Please Change the Network to the Fantom Blockchain, to access this
+              Please Change the Network to the BSC Testnet, to access this
             </p>
 
               <br/> <br/>
