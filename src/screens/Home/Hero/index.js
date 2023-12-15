@@ -155,9 +155,9 @@ const Hero = ({featuredAuctions}) => {
               Create, explore, & collect digital art NFTs.
             </div>
             <h2 className={cn("h4", styles.title)}>
-            All in one NFT platform. Powered by 
+            Billicat all-in-one NFT Marketplace
             </h2>
-            <span className={cn("h4", styles.blue)}>BSC Chain</span>
+            <span className={cn("h4", styles.blue)}>A decentralized peer-to-peer art exchange facilitating the trading of NFT collections</span>
            <br/>
            <br/>
             <Link className={cn("button-stroke", styles.button)} to="/discover">

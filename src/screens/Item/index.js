@@ -96,7 +96,7 @@ const jsmediatags = window.jsmediatags
     let nftDetails
 (async ()=>{
     if(isExternalNFTViewed === false){
-      fetch("http://localhost:5001/nft/getSingleNFTData", {
+      fetch("https://backend.billisea.io/nft/getSingleNFTData", {
         method :'POST',
         headers:{
           'Content-type' : 'application/json'
@@ -114,7 +114,7 @@ const jsmediatags = window.jsmediatags
         const contractAddress = data.nftData.contractAddress
         const contractTokenId = data.nftData.contractId
   
-        fetch(`http://localhost:5001/externalData/getNftMetaData`, {
+        fetch(`https://backend.billisea.io/externalData/getNftMetaData`, {
           method : 'POST',
           headers:{
             'Content-type' : 'application/json'
@@ -196,7 +196,7 @@ const jsmediatags = window.jsmediatags
         setArrayOfUsers(arrayOfUsers)
 
 
-        const apiCallForCollection =  await fetch('http://localhost:5001/collection/getCollection', {
+        const apiCallForCollection =  await fetch('https://backend.billisea.io/collection/getCollection', {
         method : 'POST',
         headers:{
             'Content-type' :'application/json'
@@ -232,7 +232,7 @@ const jsmediatags = window.jsmediatags
 
       console.log(contractAddress, contractTokenId)
 
-      fetch(`http://localhost:5001/externalData/getNftMetaData`, {
+      fetch(`https://backend.billisea.io/externalData/getNftMetaData`, {
           method : 'POST',
           headers:{
             'Content-type' : 'application/json'

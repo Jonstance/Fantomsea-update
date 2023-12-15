@@ -140,7 +140,7 @@ const handlePurchaseNft =  async ()=>{
         addressOfPreviousOwner : nftData.nftOwner.userAddress,
         nftID : nftData.nftID
       }
-       fetch("http://localhost:5001/nft/updateNftAfterSale", {
+       fetch("https://backend.billisea.io/nft/updateNftAfterSale", {
           method : 'POST',
           body:JSON.stringify(updateNFTData),
           headers:{
@@ -171,7 +171,7 @@ const handlePurchaseNft =  async ()=>{
       }
 
       else{
-      //   fetch("http://localhost:5001/nft/putNftOutOfSale", {
+      //   fetch("https://backend.billisea.io/nft/putNftOutOfSale", {
       //   method : 'POST',
       //   headers:{
       //     'Content-Type' : 'application/json'

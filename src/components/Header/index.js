@@ -154,7 +154,7 @@ const Headers = () => {
 
     if(userAddress.addressFound === true){
       setUserAccountAddress(userAddress.userAddress)
-      fetch("http://localhost:5001/users/getUserAccount", {
+      fetch("https://backend.billisea.io/users/getUserAccount", {
         method : 'POST',
         headers:{
           "Content-Type" : "application/json"
@@ -173,7 +173,7 @@ const Headers = () => {
           setUserData(data.userData)
 
 
-          fetch(`http://localhost:5001/externalData/getUserBalance`, {
+          fetch(`https://backend.billisea.io/externalData/getUserBalance`, {
           method : 'POST',
           headers:{
             'Content-type' : 'application/json'

@@ -60,7 +60,7 @@ const client = create("https://ipfs.infura.io:5001/api/v0")
 
 
 useEffect(()=>{
-  fetch("http://localhost:5001/users/getUserAccount", {
+  fetch("https://backend.billisea.io/users/getUserAccount", {
     method : 'POST',
     headers:{
       "Content-Type" : "application/json"
@@ -100,7 +100,7 @@ const updateUserProfile = ()=>{
 
   console.log(userData)
 
-  fetch("http://localhost:5001/users/updateUserProfile", {
+  fetch("https://backend.billisea.io/users/updateUserProfile", {
   method:'POST',
   body: JSON.stringify(userData),
   headers:{

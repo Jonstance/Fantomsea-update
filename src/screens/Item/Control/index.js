@@ -149,7 +149,7 @@ const Control = ({ className, nftData, currentUserAddress, setItemData, setNftAu
     console.log(nftData.royalty.replace('%', ''))
 
 
-    const fetchCollectionPromise = await  fetch("http://localhost:5001/collection/getCollectionByAddress", {
+    const fetchCollectionPromise = await  fetch("https://backend.billisea.io/collection/getCollectionByAddress", {
         method : 'POST',
       headers:{
         'Content-Type' : "application/json"
@@ -172,7 +172,7 @@ const Control = ({ className, nftData, currentUserAddress, setItemData, setNftAu
       
   console.log(transaction)
 
-    fetch("http://localhost:5001/nft/putNftForSale", {
+    fetch("https://backend.billisea.io/nft/putNftForSale", {
         method : 'POST',
         headers:{
           'Content-Type' : 'application/json'
@@ -251,7 +251,7 @@ catch(e){
         try{
         const transactionRemove = await nftMarketContract.removeMarketItem(nftCreatorAddress, tokenId, itemId )
           
-          fetch("http://localhost:5001/nft/putNftOutOfSale", {
+          fetch("https://backend.billisea.io/nft/putNftOutOfSale", {
       method : 'POST',
       headers:{
         'Content-Type' : 'application/json'
@@ -321,7 +321,7 @@ catch(e){
           console.log(setApprovalForAll)
         }
 
-        const fetchCollectionPromise = await  fetch("http://localhost:5001/collection/getCollectionByAddress", {
+        const fetchCollectionPromise = await  fetch("https://backend.billisea.io/collection/getCollectionByAddress", {
           method : 'POST',
         headers:{
           'Content-Type' : "application/json"
@@ -343,7 +343,7 @@ catch(e){
 
     console.log(transaction)
 
-    fetch("http://localhost:5001/nft/putNftForSale", {
+    fetch("https://backend.billisea.io/nft/putNftForSale", {
         method : 'POST',
         headers:{
           'Content-Type' : 'application/json'
@@ -354,7 +354,7 @@ catch(e){
       })
       .then(res=>res.json())
       .then(data=>{
-        fetch("http://localhost:5001/auction/setAuctionWinner", {
+        fetch("https://backend.billisea.io/auction/setAuctionWinner", {
           method:'POST',
           headers:{
             'Content-Type' : 'application/json'
@@ -383,7 +383,7 @@ catch(e){
 
   const listAuction = (reservedPrice, auctionDeadline)=>{
 
-    fetch('http://localhost:5001/auction/createAuctionFromExistingNFT', {
+    fetch('https://backend.billisea.io/auction/createAuctionFromExistingNFT', {
       method : 'POST',
       headers:{
         'Content-type' : 'application/json'

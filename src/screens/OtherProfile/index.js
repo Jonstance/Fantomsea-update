@@ -222,7 +222,7 @@ useEffect(()=>{
 
   setUserAddress(address)
 
-    fetch("http://localhost:5001/users/getUserAccount", {
+    fetch("https://backend.billisea.io/users/getUserAccount", {
       method : 'POST',
       headers:{
         "Content-Type" : "application/json"

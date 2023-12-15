@@ -41,7 +41,7 @@ const Bid = ({ className, nftData, currentUserAddress , closeBid, updateNftAucti
     console.log(doesHighestBidExist)
 
     if(Number(price) !== 0 && isBidGreaterThanHighestBid && isBidGreatedThanReservedPrice ){
-    fetch("http://localhost:5001/auction/addBidToNftsBid", {
+    fetch("https://backend.billisea.io/auction/addBidToNftsBid", {
       method :'POST',
       headers:{
         'Content-Type' : 'application/json'

@@ -18,7 +18,7 @@ const IndividualCollection = ()=> {
 
     useEffect(()=>{
 
-        fetch('http://localhost:5001/collection/getCollection', {
+        fetch('https://backend.billisea.io/collection/getCollection', {
             method : 'POST',
             headers:{
                 'Content-type' :'application/json'

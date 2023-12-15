@@ -121,7 +121,7 @@ console.log(userAccountAddress)
 const isChainRightChain = chainId === 97
 
 if(isChainRightChain){
-    fetch("http://localhost:5001/users/checkIfUserExist", {
+    fetch("https://backend.billisea.io/users/checkIfUserExist", {
       method:'POST',
       body: JSON.stringify({
         "userAddress" : userAccount
@@ -176,7 +176,7 @@ const createAccount = ()=>{
 
   setShowLoader(true)
 
-  fetch("http://localhost:5001/users/createUser", {
+  fetch("https://backend.billisea.io/users/createUser", {
   method:'POST',
   body: JSON.stringify({
     "userAddress" : userAccountAddress

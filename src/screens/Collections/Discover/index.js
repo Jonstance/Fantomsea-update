@@ -243,7 +243,7 @@ const Discover = ({nfts}) => {
                         borderRadius: "4px",
                         background: getTrackBackground({
                           values,
-                          colors: ["#3772FF", "#E6E8EC"],
+                          colors: ["#FFD700", "#E6E8EC"],
                           min: MIN,
                           max: MAX,
                         }),
@@ -262,7 +262,7 @@ const Discover = ({nfts}) => {
                       height: "24px",
                       width: "24px",
                       borderRadius: "50%",
-                      backgroundColor: "#3772FF",
+                      backgroundColor: "#FFD700",
                       border: "4px solid #FCFCFD",
                       display: "flex",
                       justifyContent: "center",

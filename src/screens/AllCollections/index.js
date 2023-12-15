@@ -12,7 +12,7 @@ const  AllCollections = ()=> {
 
     useEffect(()=>{
 
-        fetch('http://localhost:5001/collection/getAll')
+        fetch('https://backend.billisea.io/collection/getAll')
         .then(res=>res.json())
         .then(data=>{
             console.log(data)
@@ -22,7 +22,7 @@ const  AllCollections = ()=> {
     },[])
 
     const getMoreCollections = ()=>{
-        fetch('http://localhost:5001/collection/getMore', {
+        fetch('https://backend.billisea.io/collection/getMore', {
             method : 'POST',
             headers:{
                 'Content-Type' : 'application/json'

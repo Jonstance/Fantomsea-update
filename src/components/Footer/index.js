@@ -13,11 +13,11 @@ const items = [
     menu: [
       {
         title: "Twitter",
-        url: "https://twitter.com/Billisea",
+        url: "https://x.com/Billisea_io",
       },
       {
         title: "Discord",
-        url: "https://discord.gg/rWTcstBSg7",
+        url: "https://discord.gg/YfM9tng",
       },
       // {
       //   title: "Medium",
@@ -25,7 +25,7 @@ const items = [
       // },
       {
         title: "Telegram",
-        url: "https://t.me/Billisea",
+        url: "https://t.me/Billicatcoin",
       },
     ],
   },

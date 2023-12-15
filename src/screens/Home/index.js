@@ -24,7 +24,7 @@ const Home = () => {
 
   useEffect(()=>{
 
-    fetch("http://localhost:5001/data/getHomePageData")
+    fetch("https://backend.billisea.io/data/getHomePageData")
     .then(res=>res.json())
     .then(data=>{
       console.log(data)

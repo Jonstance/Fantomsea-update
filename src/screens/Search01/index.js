@@ -44,7 +44,7 @@ const Search = () => {
 
   useEffect(()=>{
 
-    fetch('http://localhost:5001/nft/getAllNfts')
+    fetch('https://backend.billisea.io/nft/getAllNfts')
     .then(res=>res.json())
     .then(data=>{
       setAllNFTData(data)
@@ -52,7 +52,7 @@ const Search = () => {
       setCurrentView(data)
     })
 
-    fetch('http://localhost:5001/collection/getAll').then(res=>res.json())
+    fetch('https://backend.billisea.io/collection/getAll').then(res=>res.json())
     .then(data=>{
       console.log(data)
       setCollectionsInFsea(data)
@@ -99,7 +99,7 @@ const Search = () => {
 
   const getMoreNFTs = ()=>{
     const lastId  = allNftData[allNftData.length-1]._id
-    fetch("http://localhost:5001/nft/getMoreNtfs", {
+    fetch("https://backend.billisea.io/nft/getMoreNtfs", {
       method:'POST',
       headers:{
         'Content-type' : 'application/json'
@@ -315,7 +315,7 @@ const Search = () => {
                         borderRadius: "4px",
                         background: getTrackBackground({
                           values,
-                          colors: ["#3772FF", "#E6E8EC"],
+                          colors: ["#FFD700", "#E6E8EC"],
                           min: MIN,
                           max: MAX,
                         }),
@@ -334,7 +334,7 @@ const Search = () => {
                       height: "24px",
                       width: "24px",
                       borderRadius: "50%",
-                      backgroundColor: "#3772FF",
+                      backgroundColor: "#FFD700",
                       border: "4px solid #FCFCFD",
                       display: "flex",
                       justifyContent: "center",

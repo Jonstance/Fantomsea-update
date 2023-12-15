@@ -377,7 +377,7 @@ const Upload = () => {
   
       if(isAuction){
 
-        fetch("http://localhost:5001/collection/uploadCollection", {
+        fetch("https://backend.billisea.io/collection/uploadCollection", {
       method : 'POST',
       headers:{
         'Content-Type' : "application/json"
@@ -420,7 +420,7 @@ const Upload = () => {
 
       console.log(nftItemData)
 
-      fetch("http://localhost:5001/nft/UploadnftAuctionData", {
+      fetch("https://backend.billisea.io/nft/UploadnftAuctionData", {
         method : 'POST',
         headers:{
           "Content-Type" : "application/json"
@@ -494,7 +494,7 @@ const Upload = () => {
   
       console.log(nftCreatorAddress)
 
-      const fetchCollectionPromise = await  fetch("http://localhost:5001/collection/getCollectionByAddress", {
+      const fetchCollectionPromise = await  fetch("https://backend.billisea.io/collection/getCollectionByAddress", {
         method : 'POST',
       headers:{
         'Content-Type' : "application/json"
@@ -518,7 +518,7 @@ const Upload = () => {
   
       const transactionDetails = await  listNFTTransaction.wait()
 
-        fetch("http://localhost:5001/collection/uploadCollection", {
+        fetch("https://backend.billisea.io/collection/uploadCollection", {
       method : 'POST',
       headers:{
         'Content-Type' : "application/json"
@@ -562,7 +562,7 @@ const Upload = () => {
   
       
   
-      fetch("http://localhost:5001/nft/uploadSingleNft", {
+      fetch("https://backend.billisea.io/nft/uploadSingleNft", {
         method : 'POST',
         headers:{
           "Content-Type" : "application/json"
@@ -611,7 +611,7 @@ const Upload = () => {
       const transactionDetails = await  listNFTTransaction.wait()
   
       console.log(transactionDetails)
-      fetch("http://localhost:5001/collection/uploadCollection", {
+      fetch("https://backend.billisea.io/collection/uploadCollection", {
         method : 'POST',
         headers:{
           'Content-Type' : "application/json"
@@ -654,7 +654,7 @@ const Upload = () => {
     
         
     
-        fetch("http://localhost:5001/nft/uploadSingleNft", {
+        fetch("https://backend.billisea.io/nft/uploadSingleNft", {
           method : 'POST',
           headers:{
             "Content-Type" : "application/json"
@@ -687,7 +687,7 @@ const Upload = () => {
 
   const uploadNftToDb = ()=>{
     if(isAuction){
-      fetch("http://localhost:5001/collection/uploadCollection", {
+      fetch("https://backend.billisea.io/collection/uploadCollection", {
     method : 'POST',
     headers:{
       'Content-Type' : "application/json"
@@ -729,7 +729,7 @@ const Upload = () => {
 
     console.log(nftItemData)
 
-    fetch("http://localhost:5001/nft/UploadnftAuctionData", {
+    fetch("https://backend.billisea.io/nft/UploadnftAuctionData", {
       method : 'POST',
       headers:{
         "Content-Type" : "application/json"
@@ -748,7 +748,7 @@ const Upload = () => {
     }
 else{
 
-  fetch("http://localhost:5001/collection/uploadCollection", {
+  fetch("https://backend.billisea.io/collection/uploadCollection", {
         method : 'POST',
         headers:{
           'Content-Type' : "application/json"
@@ -790,7 +790,7 @@ else{
         }
     
         
-        fetch("http://localhost:5001/nft/uploadSingleNft", {
+        fetch("https://backend.billisea.io/nft/uploadSingleNft", {
           method : 'POST',
           headers:{
             "Content-Type" : "application/json"
