@@ -9,7 +9,6 @@ import Moralis from 'moralis'
 import { detailsObject as MolarisDetails } from "../../molaris.config"
 import Modal from './Modal/index'
 import NFTsInWallet from "./NftsInWallet";
-import Loader from "../../components/Loader";
 
 
 
@@ -68,7 +67,7 @@ Moralis.serverURL = MolarisDetails.serverURL
   },[])
 
 
-  const handleListAccounttNFts =  async ()=>{
+  const handleListAccounttNFts =  async () => {
 
     setShowLoader(true)
   

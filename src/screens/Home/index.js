@@ -54,7 +54,6 @@ const Home = () => {
 
  <Discover nfts={generalNfts} />
 
- <Description />
 
 
       </div>

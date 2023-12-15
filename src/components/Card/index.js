@@ -132,7 +132,7 @@ const Card = ({ className, item , isExternal }) => {
           <div className={styles.line}>
             <div className={styles.title}>{itemName}</div>
             {
-              isExternal === false || isExternal ===  undefined ? <div className={styles.price}>{nftPrice} FTM</div> : ""
+              isExternal === false || isExternal ===  undefined ? <div className={styles.price}>{nftPrice} BCAT</div> : ""
             }
             
           </div>

@@ -271,7 +271,6 @@ const Headers = () => {
             srcDark="/images/logo-light.png"
             alt="Fitness Pro"
           />
-          <p style={{marginLeft:'100px'}}>Beta</p>
         </Link>
         <div className={cn(styles.wrapper, { [styles.active]: visibleNav })}>
           <nav className={styles.nav}>

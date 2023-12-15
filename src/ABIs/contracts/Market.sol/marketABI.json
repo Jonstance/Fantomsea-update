@@ -2,6 +2,90 @@
 	{
 		"inputs": [
 			{
+				"internalType": "address",
+				"name": "newOwnerAddress",
+				"type": "address"
+			}
+		],
+		"stateMutability": "nonpayable",
+		"type": "constructor"
+	},
+	{
+		"anonymous": false,
+		"inputs": [
+			{
+				"indexed": true,
+				"internalType": "uint256",
+				"name": "itemId",
+				"type": "uint256"
+			},
+			{
+				"indexed": true,
+				"internalType": "address",
+				"name": "nftContract",
+				"type": "address"
+			},
+			{
+				"indexed": true,
+				"internalType": "uint256",
+				"name": "tokenId",
+				"type": "uint256"
+			},
+			{
+				"indexed": false,
+				"internalType": "address",
+				"name": "seller",
+				"type": "address"
+			},
+			{
+				"indexed": false,
+				"internalType": "address",
+				"name": "owner",
+				"type": "address"
+			},
+			{
+				"indexed": false,
+				"internalType": "uint256",
+				"name": "price",
+				"type": "uint256"
+			},
+			{
+				"indexed": false,
+				"internalType": "uint256",
+				"name": "royaltyfee",
+				"type": "uint256"
+			},
+			{
+				"indexed": false,
+				"internalType": "address",
+				"name": "nftCreator",
+				"type": "address"
+			}
+		],
+		"name": "MarketItemCreated",
+		"type": "event"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "address",
+				"name": "creator",
+				"type": "address"
+			},
+			{
+				"internalType": "uint256",
+				"name": "royalty",
+				"type": "uint256"
+			}
+		],
+		"name": "_payRoyalty",
+		"outputs": [],
+		"stateMutability": "payable",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
 				"internalType": "address payable",
 				"name": "newListingFeeCollector",
 				"type": "address"
@@ -92,88 +176,12 @@
 	{
 		"inputs": [
 			{
-				"internalType": "address",
-				"name": "ownerAddress",
-				"type": "address"
-			}
-		],
-		"stateMutability": "nonpayable",
-		"type": "constructor"
-	},
-	{
-		"anonymous": false,
-		"inputs": [
-			{
-				"indexed": true,
-				"internalType": "uint256",
-				"name": "itemId",
-				"type": "uint256"
-			},
-			{
-				"indexed": true,
-				"internalType": "address",
-				"name": "nftContract",
-				"type": "address"
-			},
-			{
-				"indexed": true,
-				"internalType": "uint256",
-				"name": "tokenId",
-				"type": "uint256"
-			},
-			{
-				"indexed": false,
-				"internalType": "address",
-				"name": "seller",
-				"type": "address"
-			},
-			{
-				"indexed": false,
-				"internalType": "address",
-				"name": "owner",
-				"type": "address"
-			},
-			{
-				"indexed": false,
-				"internalType": "uint256",
-				"name": "price",
-				"type": "uint256"
-			},
-			{
-				"indexed": false,
-				"internalType": "uint256",
-				"name": "royaltyfee",
-				"type": "uint256"
-			},
-			{
-				"indexed": false,
-				"internalType": "address",
-				"name": "nftCreator",
-				"type": "address"
-			}
-		],
-		"name": "MarketItemCreated",
-		"type": "event"
-	},
-	{
-		"inputs": [
-			{
-				"internalType": "address",
-				"name": "nftContract",
-				"type": "address"
-			},
-			{
-				"internalType": "uint256",
-				"name": "tokenId",
-				"type": "uint256"
-			},
-			{
 				"internalType": "uint256",
 				"name": "itemId",
 				"type": "uint256"
 			}
 		],
-		"name": "removeMarketItem",
+		"name": "delistMarketItem",
 		"outputs": [],
 		"stateMutability": "nonpayable",
 		"type": "function"
@@ -231,7 +239,7 @@
 						"type": "address"
 					}
 				],
-				"internalType": "struct NFTMarket.MarketItem",
+				"internalType": "struct BilliSea.MarketItem",
 				"name": "",
 				"type": "tuple"
 			}
@@ -286,7 +294,7 @@
 						"type": "address"
 					}
 				],
-				"internalType": "struct NFTMarket.MarketItem[]",
+				"internalType": "struct BilliSea.MarketItem[]",
 				"name": "",
 				"type": "tuple[]"
 			}
@@ -341,7 +349,7 @@
 						"type": "address"
 					}
 				],
-				"internalType": "struct NFTMarket.MarketItem[]",
+				"internalType": "struct BilliSea.MarketItem[]",
 				"name": "",
 				"type": "tuple[]"
 			}
@@ -415,7 +423,7 @@
 						"type": "address"
 					}
 				],
-				"internalType": "struct NFTMarket.MarketItem",
+				"internalType": "struct BilliSea.MarketItem",
 				"name": "",
 				"type": "tuple"
 			}
@@ -434,6 +442,32 @@
 			}
 		],
 		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [],
+		"name": "royaltyToken",
+		"outputs": [
+			{
+				"internalType": "address",
+				"name": "",
+				"type": "address"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "address",
+				"name": "newOwner",
+				"type": "address"
+			}
+		],
+		"name": "transferOwnership",
+		"outputs": [],
+		"stateMutability": "nonpayable",
 		"type": "function"
 	}
 ]

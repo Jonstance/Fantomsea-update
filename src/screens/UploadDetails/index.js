@@ -78,7 +78,7 @@ const Upload = () => {
 
   const [visiblePreview, setVisiblePreview] = useState(false);
 
-  const [nftCreatorAddress, setNftCreatorAddress] = useState("0xF57Fd1CFf610278AA63CbBa0C454c5f9e5664207".toLowerCase())
+  const [nftCreatorAddress, setNftCreatorAddress] = useState("0xFBD618BD47827FD9f33cD6f73d4eB96011c8FCcb".toLowerCase())
 
   const [showNoCoverAlert, setShowNoCoverAlert] = useState(false)
 
@@ -363,15 +363,13 @@ const Upload = () => {
       const nftContract  = new ethers.Contract(nftCreatorAddress, NFTABI, signer )
 
       const transaction = await nftContract.createToken(url, {gasPrice:gasPrice, gasLimit:1000000})
+
     
       let txDetails = await transaction.wait()
-      const eventr = txDetails.events.find((event) => event.event === "Transfer");
-      const tokenId = eventr.args.tokenId.toString();
-      console.log("Newly created token ID:", tokenId);
+      const tokenIDFinal = await nftContract.getLastTokenIdByAddress(signer.getAddress())
+      console.log("Newly created token ID:", tokenIDFinal.toNumber());
 
-      let event = Web3.utils.hexToNumber(txDetails.receipt.rawLogs[0].topics[3])
-      let value = event.args[2]
-      let nftTokenId = value.toNumber()
+      const nftTokenId = tokenIDFinal.toNumber()
   
       setHasNFTBeenUploadedAndMinted(true)
   
