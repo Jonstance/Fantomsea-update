@@ -51,6 +51,10 @@ const menu = [
     title: "Sign in with Meta Mask",
     color: "#9757D7",
   },
+  {
+    title: "Sign in with WalletConnect",
+    color: "#3772ff",
+  }
 ];
 
 const Connect = () => {
