@@ -53,8 +53,6 @@ const Footers = () => {
             </Link>
             <div className={styles.info}>All in one NFT platform.</div>
             <div className={styles.version}>
-              <div className={styles.details}>Dark theme</div>
-              <Theme className="theme-big" />
             </div>
           </div>
           <div className={styles.col}>

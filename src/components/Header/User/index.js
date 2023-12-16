@@ -19,11 +19,7 @@ const items = [
     icon: "image",
     url: "/profile",
   },
-  {
-    title: "Dark theme",
-    icon: "bulb",
-  },
-  {
+    {
     title: "Disconnect",
     icon: "exit",
     url: "",
