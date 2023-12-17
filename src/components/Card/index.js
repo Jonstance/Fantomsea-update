@@ -3,7 +3,6 @@ import cn from "classnames";
 import { Link } from "react-router-dom";
 import styles from "./Card.module.sass";
 import Icon from "../Icon";
-import * as musicMetaData from 'music-metadata-browser'
 import { AppContext } from "../../context/context";
 
 const Card = ({ className, item , isExternal }) => {
@@ -15,9 +14,8 @@ const Card = ({ className, item , isExternal }) => {
   const [itemName, setItemName] = useState('')
   let  {nftName, nftPrice , nftDigitalUrl} = item
 
-  const {isExternalNFTViewed,
+  const {
     setIsExternalDataViewed,
-    nftDataInWallet,
     setNftDataInWallet} = useContext(AppContext)
 
 
@@ -69,7 +67,7 @@ const Card = ({ className, item , isExternal }) => {
 
     console.log(nftName)
 
-  },[])
+  },[isExternal, item, nftDigitalUrl, nftName])
 
 
   const handleClickedLink = ()=>{

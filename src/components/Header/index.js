@@ -1,10 +1,9 @@
 import React, { useContext, useEffect, useState,  } from "react";
-import { Link, NavLink, useHistory, useLocation } from "react-router-dom";
+import { Link, useHistory, useLocation } from "react-router-dom";
 import cn from "classnames";
 import styles from "./Header.module.sass";
 import Icon from "../Icon";
 import Image from "../Image";
-import Notification from "./Notification";
 import User from "./User";
 import Web3 from "web3";
 import Web3Modal from "web3modal";
@@ -12,34 +11,32 @@ import WalletConnectProvider from "@walletconnect/web3-provider";
 import WalletLink from 'walletlink'
 import { AppContext} from "../../context/context";
 import { clearLocalStorage, getLocalStorage } from "../../utils/localUtils";
-import FTMABI from '../../ABIs/contracts/FTM_Abi/FTMABI.json'
-import { ethers } from "ethers";
 import Modal from "../Modal";
 import Loader from '../../components/Loader/index'
 
 
 
 
-const INFURA_ID = '60e44de681c94c89b7a6db9447bfd672'
+//const INFURA_ID = '60e44de681c94c89b7a6db9447bfd672'
 
 
 
 const providerOptions = {
   walletconnect: {
     package: new WalletConnectProvider({rpc:{
-      97 : "https://data-seed-prebsc-1-s1.binance.org:8545/"
+      56 : "https://bsc-dataseed.binance.org/"
     }}), // required
     
   },
   'custom-walletlink': {
     package: WalletLink,
     connector: async (_, options) => {
-      const { appName, networkUrl, chainId } = options
+      const { appName } = options
       const walletLink = new WalletLink({
         appName,
         
       })
-      const provider = walletLink.makeWeb3Provider("https://data-seed-prebsc-1-s1.binance.org:8545/", 97)
+      const provider = walletLink.makeWeb3Provider("https://bsc-dataseed.binance.org/", 56)
       await provider.enable()
       return provider
     },
@@ -89,8 +86,7 @@ const Headers = () => {
   const [showModal, setShowModal] = useState(false)
 
 
-  const {userAccountAddress, setUserAccountAddress, setUserData,isStateUserLoggedIn, setIsStateUserLoggedIn, userData,
-    userBalance,
+  const {setUserAccountAddress, setUserData,isStateUserLoggedIn, setIsStateUserLoggedIn,
     setUserBalance,
   } = useContext(AppContext)
 
@@ -109,7 +105,8 @@ const Headers = () => {
 
   }
   
-  useEffect(async ()=>{
+  useEffect(
+    async ()=>{
 
     const userAddress =  getLocalStorage()
     console.log(userAddress)
@@ -214,7 +211,7 @@ const Headers = () => {
     const chainId =  await web3.eth.getChainId()
 
     console.log(chainId)
-    if(chainId !== 97){
+    if(chainId !== 56){
       setShowModal(true)
     }
 
@@ -246,7 +243,7 @@ const Headers = () => {
             <br/> <br/>
 
             <p style={{textAlign:"center"}}>
-              Please Change the Network to the BSC Testnet, to access this
+              Please Change the Network to the BSC, to access this
             </p>
 
               <br/> <br/>

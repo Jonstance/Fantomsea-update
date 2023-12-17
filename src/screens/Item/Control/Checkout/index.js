@@ -23,7 +23,7 @@ const Checkout = ({ className , nftData, updateTransactionId, setPurchased, onCa
 
   const [nftCreatorAddress, setNftCreatorAddress] =  useState("")
 
-const nftMarketaddress = "0x05f400E539c1732269e4d660B60FB97F52D20b3d"
+const nftMarketaddress = "0x811673b14e8b0abf4ded21bdfa490bc9693c0d71"
 
 
 const [isPurchaseInProgress, setIsPurchaseInProgress] = useState(false)  

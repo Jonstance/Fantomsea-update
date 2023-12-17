@@ -48,9 +48,10 @@ const Home = () => {
      <Selection featuredNFTs={
         featuredNfts
       } />
+      {/*
 
  <Collections  featuredCollections={featuredCollections} />
-
+    */}
 
  <Discover nfts={generalNfts} />
 

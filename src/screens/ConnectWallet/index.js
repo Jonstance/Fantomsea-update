@@ -12,53 +12,55 @@ import { AppContext } from "../../context/context";
 import { setLocalStorageData, clearLocalStorage, getLocalStorage } from "../../utils/localUtils";
 import Loader from "../../components/Loader";
 import Modal from '../../components/Modal'
+///import CoinbaseWalletSDK from "@coinbase/wallet-sdk";
+
+
+
+
 
 const INFURA_ID = '60e44de681c94c89b7a6db9447bfd672'
 
 
-
 const providerOptions = {
   walletconnect: {
-    package: new WalletConnectProvider({rpc:{
-      97 : "https://data-seed-prebsc-1-s1.binance.org:8545/"
-    }}), // required
-    
-  },
-  'custom-walletlink': {
-    package: WalletLink,
-    connector: async (_, options) => {
-      const { appName, networkUrl, chainId } = options
-      const walletLink = new WalletLink({
-        appName,
-        
-      })
-      const provider = walletLink.makeWeb3Provider("https://data-seed-prebsc-1-s1.binance.org:8545/", 97)
-      await provider.enable()
-      return provider
+    package: new WalletConnectProvider({
+      rpc:{
+        56 : "https://bsc-dataseed.binance.org/"
+      }
+    }), // required
+    options: {
+        infuraId: INFURA_ID, // required
     },
-  },
+},
+ /* coinbasewallet: {
+    package: CoinbaseWalletSDK, // Required
+    options: {
+        appName: 'Billisea', // Required
+        infuraId: INFURA_ID, // Required
+         rpc: 'https://bsc-dataseed.binance.org/', // Optional if `infuraId` is provided; otherwise it's required
+         chainId: 56, // Optional. It defaults to 1 if not provided
+        darkMode: false, // Optional. Use dark theme, defaults to false
+    },
+},*/
+  
 }
 
 const web3Modal = new Web3Modal({
-  network: "testnet",
-  cacheProvider: true,
+  network: "mainnet",
+  cacheProvider: false,
   providerOptions
 });
 
 
 const menu = [
   {
-    title: "Sign in with Meta Mask",
-    color: "#9757D7",
-  },
-  {
-    title: "Sign in with WalletConnect",
+    title: "Sign in with Meta Mask or WalletConnect",
     color: "#3772ff",
-  }
+  },
 ];
 
-const Connect = () => {
 
+const Connect = () => {
   const [age, setAge] = useState(true);
   const [conditions, setConditions] = useState(false);
   const [doesUserExist, setDoesUserExist] = useState(true)
@@ -79,26 +81,21 @@ const Connect = () => {
     setShowModal(false)
   }
 
+
 const connectMyWallet = async () => {
 
   setShowLoader(true)
 
 const provider = await web3Modal.connect();
-
 provider.on("accountsChanged", (accounts)=>{
   const userAccount =  accounts[0]
-
   console.log(userAccount)
-
   handleLogOut()
-
   history.push('/connect-wallet')
   window.location.reload() 
-
 })
-
 provider.on("chainChanged", (changedId)=>{
-  if(changedId.toLowerCase() ===  "97"){
+  if(changedId.toLowerCase() ===  "56"){
     setShowModal(false)
   }
   else{
@@ -122,7 +119,7 @@ setUserAccountAddress(userAccount)
 console.log(userAccountAddress)
 
 
-const isChainRightChain = chainId === 97
+const isChainRightChain = chainId === 56
 
 if(isChainRightChain){
     fetch("https://backend.billisea.io/users/checkIfUserExist", {
@@ -229,7 +226,7 @@ const createAccount = ()=>{
             <br/> <br/>
 
             <p style={{textAlign:"center"}}>
-              Please Change the Network to the BSC Testnet Network  to access your account
+              Please Change the Network to the BSC Network  to access your account
             </p>
 
               <br/> <br/>
@@ -267,6 +264,7 @@ const createAccount = ()=>{
               </div>
             ))}
           </div>
+          
           <div className={styles.wrapper}>
             <div className={styles.bg}>
               {/* <img

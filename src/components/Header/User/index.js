@@ -59,7 +59,7 @@ const User = ({ className }) => {
       <div className={cn(styles.user, className)}>
         <div className={styles.head} onClick={() => setVisible(!visible)}>
           <div className={styles.avatar}>
-            <img src={userData.avatar} />
+            <img alt="avatar" src={userData.avatar} />
           </div>
           <div className={styles.wallet}>
             {userBalance.toFixed(2)}  <span className={styles.currency}>BCAT</span>
@@ -78,6 +78,7 @@ const User = ({ className }) => {
               <div className={styles.line}>
                 <div className={styles.preview}>
                   <img
+                  alt="tokenImage"
                     src={Fantom}
                   />
                 </div>

@@ -4,9 +4,7 @@ import Page from "./components/Page";
 import Home from "./screens/Home";
 import UploadVariants from "./screens/UploadVariants";
 import UploadDetails from "./screens/UploadDetails";
-import UploadMultipleDetails from "./screens/UploadMultipleDetails";
 import ConnectWallet from "./screens/ConnectWallet";
-import Faq from "./screens/Faq";
 import Activity from "./screens/Activity";
 import Search01 from "./screens/Search01";
 import Search02 from "./screens/Search02";
@@ -18,12 +16,6 @@ import UserProfile from "./screens/OtherProfile";
 import IndividualCollection from "./screens/Collections";
 import AllCollections from "./screens/AllCollections";
 
-import {ethers} from 'ethers';
-import axios from 'axios';
-import { useEffect, useState } from 'react';
-import { nftaddress, nftmarketaddress } from "./config";
-import NFT from "./ABIs/contracts/NFT.sol/NFT.json";
-import Market from "./ABIs/contracts/NFTMarket.sol/NFTMarket.json";
 import AppProvider  from "./context/context";
 
 
@@ -33,7 +25,6 @@ import AppProvider  from "./context/context";
 function App() {
 
 
-  const [nfts, setNfts] =  useState('')
 
   return (
     <AppProvider>

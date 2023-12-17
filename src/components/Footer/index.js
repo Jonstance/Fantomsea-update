@@ -1,11 +1,9 @@
-import React, { useState } from "react";
+import React from "react";
 import { Link } from "react-router-dom";
 import cn from "classnames";
 import styles from "./Footer.module.sass";
 import Group from "./Group";
 import Image from "../Image";
-import Form from "../Form";
-import Theme from "../Theme";
 
 const items = [
   {
@@ -32,12 +30,8 @@ const items = [
 ];
 
 const Footers = () => {
-  const [email, setEmail] = useState("");
 
-  const handleSubmit = (e) => {
-    alert();
-  };
-
+  
   return (
     <footer className={styles.footer}>
       <div className={cn("container", styles.container)}>
