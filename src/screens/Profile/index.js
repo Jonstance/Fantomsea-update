@@ -165,20 +165,14 @@ const handleProfileCoverChange = async ()=>{
 
 
 useEffect(async ()=>{
-
-  
   const userAddress = getLocalStorage()
-
   let addressToUse = userAccountAddress
 
   if(userAccountAddress.trim() === '' && userAddress.addressFound === true){
     setUserAccountAddress(userAddress.userAddress)
      addressToUse = userAddress.userAddress
   }
-
   console.log(addressToUse)
-
-
     fetch("https://backend.billisea.io/users/getUserAccount", {
       method : 'POST',
       headers:{

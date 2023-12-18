@@ -133,9 +133,7 @@ const handleAvatarChange = async (event)=>{
       setAvatarLink(response.pinataURL)
 
 }
-
-
-      
+     
 }
 
   return (
